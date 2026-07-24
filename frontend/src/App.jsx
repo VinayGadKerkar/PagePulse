@@ -34,6 +34,7 @@ function MetricCard({ label, value, highlight }) {
 }
 
 export default function App() {
+  const API = import.meta.env.VITE_API_URL;
   const [url, setUrl] = useState("");
   const [loading, setLoading] = useState(false);
   const [result, setResult] = useState(null);
@@ -48,7 +49,7 @@ export default function App() {
     setError(null);
 
     try {
-      const res = await fetch("/api/analyze", {
+      const res = await fetch(`${API}/analyze`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ url: trimmed }),
@@ -190,6 +191,26 @@ export default function App() {
           </div>
         </div>
       )}
+      <footer
+        style={{
+          marginTop: "60px",
+          color: "#6b7280",
+          fontSize: "13px",
+        }}
+      >
+        Built for{" "}
+        <a
+          href="https://digitalheroesco.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{
+            color: "#6366f1",
+            textDecoration: "none",
+          }}
+        >
+          Digital Heroes Training Task
+        </a>
+      </footer>
     </div>
   );
 }
