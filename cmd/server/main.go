@@ -7,6 +7,7 @@ import (
 	"os"
 
 	"pagepulse/internal/handlers"
+	"pagepulse/internal/middleware"
 )
 
 func main() {
@@ -26,7 +27,7 @@ func main() {
 
 	addr := ":" + port
 	log.Printf("pagepulse server starting on %s", addr)
-	if err := http.ListenAndServe(addr, mux); err != nil {
+	if err := http.ListenAndServe(addr, middleware.CORS(mux)); err != nil {
 		log.Fatalf("server failed: %v", err)
 	}
 }
