@@ -49,9 +49,13 @@ export default function App() {
     setError(null);
 
     try {
-      const res = await fetch(`${API}/analyze`, {
+      const API = import.meta.env.VITE_API_URL;
+
+      const res = await fetch(`${API}/api/analyze`, {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: {
+          "Content-Type": "application/json",
+        },
         body: JSON.stringify({ url: trimmed }),
       });
 
