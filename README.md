@@ -246,15 +246,16 @@ go test ./...
 
 ## 🤖 AI Usage
 
-AI tools (ChatGPT , Claude) were used to:
+AI tools (**ChatGPT** and **Claude**) were used throughout the project to:
 
-- Brainstorm project architecture
-- Review Go code
-- Improve README documentation
-- Refine UI copy
+- Brainstorm the overall project architecture
+- Generate and iterate on portions of the backend and frontend code
+- Review and refactor Go code for readability and maintainability
+- Discuss error-handling approaches and API design
+- Improve the README documentation
+- Refine UI copy and project structure
 
-All implementation, debugging, testing, deployment, and final code decisions were completed and verified manually.
-
+After using AI-generated suggestions, I reviewed the code, modified it to fit the project requirements, debugged implementation issues, fixed deployment and CORS problems, wrote and verified the tests, and made the final implementation and deployment decisions myself. All submitted code was manually tested and validated before submission.
 ---
 
 ## 📄 License
