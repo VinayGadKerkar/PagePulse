@@ -5,6 +5,8 @@ import (
 	"log"
 	"net/http"
 	"os"
+
+	"pagepulse/internal/handlers"
 )
 
 func main() {
@@ -14,10 +16,13 @@ func main() {
 	}
 
 	mux := http.NewServeMux()
+
 	mux.HandleFunc("/health", func(w http.ResponseWriter, r *http.Request) {
 		w.Header().Set("Content-Type", "application/json")
 		fmt.Fprintln(w, `{"status":"ok"}`)
 	})
+
+	mux.HandleFunc("/api/analyze", handlers.Analyze)
 
 	addr := ":" + port
 	log.Printf("pagepulse server starting on %s", addr)
