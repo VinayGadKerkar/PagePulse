@@ -256,6 +256,7 @@ AI tools (**ChatGPT** and **Claude**) were used throughout the project to:
 - Refine UI copy and project structure
 
 After using AI-generated suggestions, I reviewed the code, modified it to fit the project requirements, debugged implementation issues, fixed deployment and CORS problems, wrote and verified the tests, and made the final implementation and deployment decisions myself. All submitted code was manually tested and validated before submission.
+
 ---
 
 ## 📄 License
